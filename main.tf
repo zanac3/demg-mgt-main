@@ -30,6 +30,7 @@ module "virtual_machine" {
   location                   = var.location
   zone                       = "1"
   encryption_at_host_enabled = false
+  count = 0
 
   source_image_reference = {
     publisher = "Canonical"
@@ -52,3 +53,4 @@ module "virtual_machine" {
 
   tags = var.tags
 }
+
